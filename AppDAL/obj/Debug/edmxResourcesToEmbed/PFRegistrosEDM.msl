@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PFRegistrosModelStoreContainer" CdmEntityContainer="PFRegistrosEntities">
+    <EntitySetMapping Name="entradas">
+      <EntityTypeMapping TypeName="PFRegistrosModel.entrada">
+        <MappingFragment StoreEntitySet="entrada">
+          <ScalarProperty Name="EntradaId" ColumnName="EntradaId" />
+          <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="Destino" ColumnName="Destino" />
+          <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="personas">
+      <EntityTypeMapping TypeName="PFRegistrosModel.persona">
+        <MappingFragment StoreEntitySet="persona">
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Dni" ColumnName="Dni" />
+          <ScalarProperty Name="Edad" ColumnName="Edad" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="PFRegistrosModel.usuario">
+        <MappingFragment StoreEntitySet="usuario">
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

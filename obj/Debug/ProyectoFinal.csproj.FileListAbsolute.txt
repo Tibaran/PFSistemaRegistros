@@ -9,3 +9,16 @@ F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CoreCompileInputs.c
 F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.exe
 F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
 F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FormEntradas.resources
+F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FormListadoEntradas.resources
+F:\proyectosNET\ProyectoFinal\bin\Debug\AppBLL.dll
+F:\proyectosNET\ProyectoFinal\bin\Debug\AppEntities.dll
+F:\proyectosNET\ProyectoFinal\bin\Debug\AppDAL.dll
+F:\proyectosNET\ProyectoFinal\bin\Debug\EntityFramework.dll
+F:\proyectosNET\ProyectoFinal\bin\Debug\AppBLL.pdb
+F:\proyectosNET\ProyectoFinal\bin\Debug\AppEntities.pdb
+F:\proyectosNET\ProyectoFinal\bin\Debug\AppDAL.pdb
+F:\proyectosNET\ProyectoFinal\bin\Debug\AppDAL.dll.config
+F:\proyectosNET\ProyectoFinal\bin\Debug\EntityFramework.xml
+F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CopyComplete
+F:\proyectosNET\ProyectoFinal\bin\Debug\EntityFramework.SqlServer.dll
+F:\proyectosNET\ProyectoFinal\bin\Debug\EntityFramework.SqlServer.xml

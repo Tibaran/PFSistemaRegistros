@@ -111,7 +111,7 @@ namespace ProyectoFinal
         {
             DisableButton();
             lblTitle.Text = "HOME";
-            panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
+            panelTitleBar.BackColor = Color.FromArgb(51, 51, 76);
             panelLogo.BackColor = Color.FromArgb(39, 39, 58);
             currentButton = null;
             btnCloseChildForm.Visible = false;
@@ -139,6 +139,21 @@ namespace ProyectoFinal
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnEntradasListado_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormListadoEntradas(), sender);
+        }
+
+        private void btnPersona_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnListarPersonas_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

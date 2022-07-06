@@ -1,0 +1,6 @@
+F:\proyectosNET\ProyectoFinal\AppEntities\bin\Debug\AppEntities.dll
+F:\proyectosNET\ProyectoFinal\AppEntities\bin\Debug\AppEntities.pdb
+F:\proyectosNET\ProyectoFinal\AppEntities\obj\Debug\AppEntities.csprojAssemblyReference.cache
+F:\proyectosNET\ProyectoFinal\AppEntities\obj\Debug\AppEntities.csproj.CoreCompileInputs.cache
+F:\proyectosNET\ProyectoFinal\AppEntities\obj\Debug\AppEntities.dll
+F:\proyectosNET\ProyectoFinal\AppEntities\obj\Debug\AppEntities.pdb

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PFRegistrosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="entrada">
+          <Key>
+            <PropertyRef Name="EntradaId" />
+          </Key>
+          <Property Name="EntradaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FechaHora" Type="datetime" Nullable="false" />
+          <Property Name="PersonaId" Type="int" Nullable="false" />
+          <Property Name="Destino" Type="varchar" MaxLength="255" />
+          <Property Name="Motivo" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="persona">
+          <Key>
+            <PropertyRef Name="PersonaId" />
+          </Key>
+          <Property Name="PersonaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Apellido" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Dni" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="Edad" Type="int" />
+          <Property Name="Sexo" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="UsuarioId" />
+          </Key>
+          <Property Name="UsuarioId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="16" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__entrada__Persona__300424B4">
+          <End Role="persona" Type="Self.persona" Multiplicity="1" />
+          <End Role="entrada" Type="Self.entrada" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="PersonaId" />
+            </Principal>
+            <Dependent Role="entrada">
+              <PropertyRef Name="PersonaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PFRegistrosModelStoreContainer">
+          <EntitySet Name="entrada" EntityType="Self.entrada" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="persona" EntityType="Self.persona" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__entrada__Persona__300424B4" Association="Self.FK__entrada__Persona__300424B4">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="entrada" EntitySet="entrada" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PFRegistrosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="entrada">
+          <Key>
+            <PropertyRef Name="EntradaId" />
+          </Key>
+          <Property Name="EntradaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FechaHora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PersonaId" Type="Int32" Nullable="false" />
+          <Property Name="Destino" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Motivo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="persona" Relationship="Self.FK__entrada__Persona__300424B4" FromRole="entrada" ToRole="persona" />
+        </EntityType>
+        <EntityType Name="persona">
+          <Key>
+            <PropertyRef Name="PersonaId" />
+          </Key>
+          <Property Name="PersonaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Apellido" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Dni" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Edad" Type="Int32" />
+          <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="entradas" Relationship="Self.FK__entrada__Persona__300424B4" FromRole="persona" ToRole="entrada" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="UsuarioId" />
+          </Key>
+          <Property Name="UsuarioId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__entrada__Persona__300424B4">
+          <End Role="persona" Type="Self.persona" Multiplicity="1" />
+          <End Role="entrada" Type="Self.entrada" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="PersonaId" />
+            </Principal>
+            <Dependent Role="entrada">
+              <PropertyRef Name="PersonaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PFRegistrosEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="entradas" EntityType="Self.entrada" />
+          <EntitySet Name="personas" EntityType="Self.persona" />
+          <EntitySet Name="usuarios" EntityType="Self.usuario" />
+          <AssociationSet Name="FK__entrada__Persona__300424B4" Association="Self.FK__entrada__Persona__300424B4">
+            <End Role="persona" EntitySet="personas" />
+            <End Role="entrada" EntitySet="entradas" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PFRegistrosModelStoreContainer" CdmEntityContainer="PFRegistrosEntities">
+          <EntitySetMapping Name="entradas">
+            <EntityTypeMapping TypeName="PFRegistrosModel.entrada">
+              <MappingFragment StoreEntitySet="entrada">
+                <ScalarProperty Name="EntradaId" ColumnName="EntradaId" />
+                <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+                <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+                <ScalarProperty Name="Destino" ColumnName="Destino" />
+                <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="personas">
+            <EntityTypeMapping TypeName="PFRegistrosModel.persona">
+              <MappingFragment StoreEntitySet="persona">
+                <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Dni" ColumnName="Dni" />
+                <ScalarProperty Name="Edad" ColumnName="Edad" />
+                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuarios">
+            <EntityTypeMapping TypeName="PFRegistrosModel.usuario">
+              <MappingFragment StoreEntitySet="usuario">
+                <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

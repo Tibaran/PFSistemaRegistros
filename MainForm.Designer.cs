@@ -31,9 +31,9 @@ namespace ProyectoFinal
         {
             this.panelMenu = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnListarPersonas = new System.Windows.Forms.Button();
+            this.btnPersona = new System.Windows.Forms.Button();
+            this.btnEntradasListado = new System.Windows.Forms.Button();
             this.btnEntradas = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,18 +44,20 @@ namespace ProyectoFinal
             this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDesktopPanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
+            this.panelDesktopPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panelMenu.Controls.Add(this.button4);
-            this.panelMenu.Controls.Add(this.button3);
-            this.panelMenu.Controls.Add(this.button2);
-            this.panelMenu.Controls.Add(this.button1);
+            this.panelMenu.Controls.Add(this.btnListarPersonas);
+            this.panelMenu.Controls.Add(this.btnPersona);
+            this.panelMenu.Controls.Add(this.btnEntradasListado);
             this.panelMenu.Controls.Add(this.btnEntradas);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -83,62 +85,65 @@ namespace ProyectoFinal
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnListarPersonas
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button3.Image = global::ProyectoFinal.Properties.Resources.reloj2;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 260);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(220, 60);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Registrar Entrada";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnListarPersonas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnListarPersonas.FlatAppearance.BorderSize = 0;
+            this.btnListarPersonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarPersonas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarPersonas.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnListarPersonas.Image = global::ProyectoFinal.Properties.Resources.view_details_24;
+            this.btnListarPersonas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListarPersonas.Location = new System.Drawing.Point(0, 260);
+            this.btnListarPersonas.Name = "btnListarPersonas";
+            this.btnListarPersonas.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnListarPersonas.Size = new System.Drawing.Size(220, 60);
+            this.btnListarPersonas.TabIndex = 4;
+            this.btnListarPersonas.Text = "  Listar Personas";
+            this.btnListarPersonas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListarPersonas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnListarPersonas.UseVisualStyleBackColor = true;
+            this.btnListarPersonas.Click += new System.EventHandler(this.btnListarPersonas_Click);
             // 
-            // button2
+            // btnPersona
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button2.Image = global::ProyectoFinal.Properties.Resources.reloj2;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 200);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(220, 60);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Registrar Entrada";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnPersona.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPersona.FlatAppearance.BorderSize = 0;
+            this.btnPersona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPersona.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersona.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPersona.Image = global::ProyectoFinal.Properties.Resources.user_24;
+            this.btnPersona.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPersona.Location = new System.Drawing.Point(0, 200);
+            this.btnPersona.Name = "btnPersona";
+            this.btnPersona.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnPersona.Size = new System.Drawing.Size(220, 60);
+            this.btnPersona.TabIndex = 3;
+            this.btnPersona.Text = "  Registrar Persona";
+            this.btnPersona.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPersona.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPersona.UseVisualStyleBackColor = true;
+            this.btnPersona.Click += new System.EventHandler(this.btnPersona_Click);
             // 
-            // button1
+            // btnEntradasListado
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Image = global::ProyectoFinal.Properties.Resources.reloj2;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 140);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(220, 60);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Registrar Entrada";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEntradasListado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEntradasListado.FlatAppearance.BorderSize = 0;
+            this.btnEntradasListado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntradasListado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntradasListado.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnEntradasListado.Image = global::ProyectoFinal.Properties.Resources.view_details_24;
+            this.btnEntradasListado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEntradasListado.Location = new System.Drawing.Point(0, 140);
+            this.btnEntradasListado.Name = "btnEntradasListado";
+            this.btnEntradasListado.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnEntradasListado.Size = new System.Drawing.Size(220, 60);
+            this.btnEntradasListado.TabIndex = 2;
+            this.btnEntradasListado.Text = "  Listar Entradas";
+            this.btnEntradasListado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEntradasListado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEntradasListado.UseVisualStyleBackColor = true;
+            this.btnEntradasListado.Click += new System.EventHandler(this.btnEntradasListado_Click);
             // 
             // btnEntradas
             // 
@@ -147,7 +152,7 @@ namespace ProyectoFinal
             this.btnEntradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntradas.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnEntradas.Image = global::ProyectoFinal.Properties.Resources.reloj2;
+            this.btnEntradas.Image = global::ProyectoFinal.Properties.Resources.time_8_24;
             this.btnEntradas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEntradas.Location = new System.Drawing.Point(0, 80);
             this.btnEntradas.Name = "btnEntradas";
@@ -183,7 +188,7 @@ namespace ProyectoFinal
             // 
             // panelTitleBar
             // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panelTitleBar.Controls.Add(this.btnMinimize);
             this.panelTitleBar.Controls.Add(this.btnClose);
             this.panelTitleBar.Controls.Add(this.btnMaximize);
@@ -201,7 +206,7 @@ namespace ProyectoFinal
             this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Image = global::ProyectoFinal.Properties.Resources.circulo;
+            this.btnMinimize.Image = global::ProyectoFinal.Properties.Resources.circle_outline_16;
             this.btnMinimize.Location = new System.Drawing.Point(647, 2);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(20, 18);
@@ -215,7 +220,7 @@ namespace ProyectoFinal
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnClose.Image = global::ProyectoFinal.Properties.Resources.circulo;
+            this.btnClose.Image = global::ProyectoFinal.Properties.Resources.circle_outline_16;
             this.btnClose.Location = new System.Drawing.Point(698, 1);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(20, 20);
@@ -228,7 +233,7 @@ namespace ProyectoFinal
             this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaximize.FlatAppearance.BorderSize = 0;
             this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximize.Image = global::ProyectoFinal.Properties.Resources.circulo;
+            this.btnMaximize.Image = global::ProyectoFinal.Properties.Resources.circle_outline_16;
             this.btnMaximize.Location = new System.Drawing.Point(673, 1);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(20, 20);
@@ -241,7 +246,7 @@ namespace ProyectoFinal
             this.btnCloseChildForm.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
             this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseChildForm.Image = global::ProyectoFinal.Properties.Resources.x;
+            this.btnCloseChildForm.Image = global::ProyectoFinal.Properties.Resources.x_mark_32;
             this.btnCloseChildForm.Location = new System.Drawing.Point(0, 0);
             this.btnCloseChildForm.Name = "btnCloseChildForm";
             this.btnCloseChildForm.Size = new System.Drawing.Size(75, 80);
@@ -257,17 +262,28 @@ namespace ProyectoFinal
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(330, 25);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(77, 26);
+            this.lblTitle.Size = new System.Drawing.Size(78, 26);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "MENU";
+            this.lblTitle.Text = "HOME";
             // 
             // panelDesktopPanel
             // 
+            this.panelDesktopPanel.Controls.Add(this.label2);
             this.panelDesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktopPanel.Location = new System.Drawing.Point(220, 80);
             this.panelDesktopPanel.Name = "panelDesktopPanel";
             this.panelDesktopPanel.Size = new System.Drawing.Size(721, 461);
             this.panelDesktopPanel.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(286, 180);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(177, 30);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "BIENVENIDO!";
             // 
             // MainForm
             // 
@@ -284,6 +300,8 @@ namespace ProyectoFinal
             this.panelLogo.PerformLayout();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
+            this.panelDesktopPanel.ResumeLayout(false);
+            this.panelDesktopPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -294,9 +312,9 @@ namespace ProyectoFinal
         private System.Windows.Forms.Button btnEntradas;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnListarPersonas;
+        private System.Windows.Forms.Button btnPersona;
+        private System.Windows.Forms.Button btnEntradasListado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Label lblTitle;
@@ -305,6 +323,7 @@ namespace ProyectoFinal
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnMaximize;
+        private System.Windows.Forms.Label label2;
     }
 }
 

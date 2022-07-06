@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PFRegistrosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="entrada">
+    <Key>
+      <PropertyRef Name="EntradaId" />
+    </Key>
+    <Property Name="EntradaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FechaHora" Type="datetime" Nullable="false" />
+    <Property Name="PersonaId" Type="int" Nullable="false" />
+    <Property Name="Destino" Type="varchar" MaxLength="255" />
+    <Property Name="Motivo" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="persona">
+    <Key>
+      <PropertyRef Name="PersonaId" />
+    </Key>
+    <Property Name="PersonaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="Apellido" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="Dni" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="Edad" Type="int" />
+    <Property Name="Sexo" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="UsuarioId" />
+    </Key>
+    <Property Name="UsuarioId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="16" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__entrada__Persona__300424B4">
+    <End Role="persona" Type="Self.persona" Multiplicity="1" />
+    <End Role="entrada" Type="Self.entrada" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="persona">
+        <PropertyRef Name="PersonaId" />
+      </Principal>
+      <Dependent Role="entrada">
+        <PropertyRef Name="PersonaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PFRegistrosModelStoreContainer">
+    <EntitySet Name="entrada" EntityType="Self.entrada" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="persona" EntityType="Self.persona" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__entrada__Persona__300424B4" Association="Self.FK__entrada__Persona__300424B4">
+      <End Role="persona" EntitySet="persona" />
+      <End Role="entrada" EntitySet="entrada" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

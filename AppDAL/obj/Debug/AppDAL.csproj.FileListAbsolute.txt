@@ -1,0 +1,14 @@
+F:\proyectosNET\ProyectoFinal\AppDAL\bin\Debug\AppDAL.dll.config
+F:\proyectosNET\ProyectoFinal\AppDAL\bin\Debug\AppDAL.dll
+F:\proyectosNET\ProyectoFinal\AppDAL\bin\Debug\AppDAL.pdb
+F:\proyectosNET\ProyectoFinal\AppDAL\bin\Debug\AppEntities.dll
+F:\proyectosNET\ProyectoFinal\AppDAL\bin\Debug\EntityFramework.dll
+F:\proyectosNET\ProyectoFinal\AppDAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\proyectosNET\ProyectoFinal\AppDAL\bin\Debug\AppEntities.pdb
+F:\proyectosNET\ProyectoFinal\AppDAL\bin\Debug\EntityFramework.xml
+F:\proyectosNET\ProyectoFinal\AppDAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\proyectosNET\ProyectoFinal\AppDAL\obj\Debug\AppDAL.csprojAssemblyReference.cache
+F:\proyectosNET\ProyectoFinal\AppDAL\obj\Debug\AppDAL.csproj.CoreCompileInputs.cache
+F:\proyectosNET\ProyectoFinal\AppDAL\obj\Debug\AppDAL.csproj.CopyComplete
+F:\proyectosNET\ProyectoFinal\AppDAL\obj\Debug\AppDAL.dll
+F:\proyectosNET\ProyectoFinal\AppDAL\obj\Debug\AppDAL.pdb

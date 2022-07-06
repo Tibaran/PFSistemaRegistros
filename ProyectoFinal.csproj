@@ -33,7 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,6 +59,12 @@
     <Compile Include="Forms\FormEntradas.Designer.cs">
       <DependentUpon>FormEntradas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormListadoEntradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormListadoEntradas.Designer.cs">
+      <DependentUpon>FormListadoEntradas.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +76,9 @@
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="Forms\FormEntradas.resx">
       <DependentUpon>FormEntradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormListadoEntradas.resx">
+      <DependentUpon>FormListadoEntradas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -78,6 +94,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include=".editorconfig" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -91,11 +108,31 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="AppBLL\AppBLL.csproj">
+      <Project>{13617ae3-bb1c-4818-a78c-78d20f5647e3}</Project>
+      <Name>AppBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="AppDAL\AppDAL.csproj">
+      <Project>{0bf2f8fb-67f9-488c-85c6-8ffdfebe9db8}</Project>
+      <Name>AppDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="AppEntities\AppEntities.csproj">
+      <Project>{a66c2fb2-3fb8-4e16-a6e6-6d424cc640ad}</Project>
+      <Name>AppEntities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sinchronize-16.png" />
+    <None Include="Resources\sinchronize-24.png" />
+    <None Include="Resources\user-24.png" />
+    <None Include="Resources\view-details-24.png" />
+    <None Include="Resources\time-8-24.png" />
+    <None Include="Resources\x-mark-32.png" />
     <None Include="Resources\x.png" />
     <None Include="Resources\cancelar.png" />
     <None Include="Resources\circulo.png" />
+    <None Include="Resources\circle-outline-16.png" />
     <Content Include="Resources\reloj.png" />
     <None Include="Resources\reloj1.png" />
   </ItemGroup>

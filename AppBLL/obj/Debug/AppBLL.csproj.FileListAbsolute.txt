@@ -1,0 +1,14 @@
+F:\proyectosNET\ProyectoFinal\AppBLL\bin\Debug\AppBLL.dll
+F:\proyectosNET\ProyectoFinal\AppBLL\bin\Debug\AppBLL.pdb
+F:\proyectosNET\ProyectoFinal\AppBLL\bin\Debug\AppDAL.dll
+F:\proyectosNET\ProyectoFinal\AppBLL\bin\Debug\AppEntities.dll
+F:\proyectosNET\ProyectoFinal\AppBLL\bin\Debug\EntityFramework.dll
+F:\proyectosNET\ProyectoFinal\AppBLL\bin\Debug\AppDAL.pdb
+F:\proyectosNET\ProyectoFinal\AppBLL\bin\Debug\AppDAL.dll.config
+F:\proyectosNET\ProyectoFinal\AppBLL\bin\Debug\AppEntities.pdb
+F:\proyectosNET\ProyectoFinal\AppBLL\bin\Debug\EntityFramework.xml
+F:\proyectosNET\ProyectoFinal\AppBLL\obj\Debug\AppBLL.csprojAssemblyReference.cache
+F:\proyectosNET\ProyectoFinal\AppBLL\obj\Debug\AppBLL.csproj.CoreCompileInputs.cache
+F:\proyectosNET\ProyectoFinal\AppBLL\obj\Debug\AppBLL.csproj.CopyComplete
+F:\proyectosNET\ProyectoFinal\AppBLL\obj\Debug\AppBLL.dll
+F:\proyectosNET\ProyectoFinal\AppBLL\obj\Debug\AppBLL.pdb
