@@ -1,0 +1,11 @@
+F:\proyectosNET\ProyectoFinal\bin\Debug\ProyectoFinal.exe.config
+F:\proyectosNET\ProyectoFinal\bin\Debug\ProyectoFinal.exe
+F:\proyectosNET\ProyectoFinal\bin\Debug\ProyectoFinal.pdb
+F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.csprojAssemblyReference.cache
+F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.MainForm.resources
+F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.Properties.Resources.resources
+F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.GenerateResource.cache
+F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CoreCompileInputs.cache
+F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.exe
+F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
+F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FormEntradas.resources
