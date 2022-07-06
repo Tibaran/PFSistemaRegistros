@@ -5,7 +5,8 @@
       <PropertyRef Name="EntradaId" />
     </Key>
     <Property Name="EntradaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FechaHora" Type="datetime" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Hora" Type="time" Precision="7" />
     <Property Name="PersonaId" Type="int" Nullable="false" />
     <Property Name="Destino" Type="varchar" MaxLength="255" />
     <Property Name="Motivo" Type="varchar" MaxLength="255" />
@@ -29,7 +30,7 @@
     <Property Name="Username" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="Password" Type="varchar" MaxLength="16" Nullable="false" />
   </EntityType>
-  <Association Name="FK__entrada__Persona__300424B4">
+  <Association Name="FK__entrada__Persona__32E0915F">
     <End Role="persona" Type="Self.persona" Multiplicity="1" />
     <End Role="entrada" Type="Self.entrada" Multiplicity="*" />
     <ReferentialConstraint>
@@ -45,7 +46,7 @@
     <EntitySet Name="entrada" EntityType="Self.entrada" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="persona" EntityType="Self.persona" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__entrada__Persona__300424B4" Association="Self.FK__entrada__Persona__300424B4">
+    <AssociationSet Name="FK__entrada__Persona__32E0915F" Association="Self.FK__entrada__Persona__32E0915F">
       <End Role="persona" EntitySet="persona" />
       <End Role="entrada" EntitySet="entrada" />
     </AssociationSet>

@@ -73,6 +73,16 @@ namespace ProyectoFinal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap check_mark_7_48 {
+            get {
+                object obj = ResourceManager.GetObject("check-mark-7-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap circle_outline_16 {
             get {
                 object obj = ResourceManager.GetObject("circle-outline-16", resourceCulture);
@@ -86,6 +96,26 @@ namespace ProyectoFinal.Properties {
         internal static System.Drawing.Bitmap circulo {
             get {
                 object obj = ResourceManager.GetObject("circulo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap error_48 {
+            get {
+                object obj = ResourceManager.GetObject("error-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap error_64 {
+            get {
+                object obj = ResourceManager.GetObject("error-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

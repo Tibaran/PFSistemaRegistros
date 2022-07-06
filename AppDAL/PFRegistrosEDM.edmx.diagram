@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b618032ebbab4b58a3549da689a3001d" Name="Diagram1">
+      <Diagram DiagramId="b2d23baa812945b981f798793a558d2a" Name="Diagram1">
         <EntityTypeShape EntityType="PFRegistrosModel.entrada" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="PFRegistrosModel.persona" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="PFRegistrosModel.usuario" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <AssociationConnector Association="PFRegistrosModel.FK__entrada__Persona__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="PFRegistrosModel.FK__entrada__Persona__32E0915F" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

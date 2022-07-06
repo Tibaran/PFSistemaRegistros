@@ -30,8 +30,6 @@ namespace ProyectoFinal.Forms
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbSexo = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.nudEdad = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,16 +48,19 @@ namespace ProyectoFinal.Forms
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.dtpFechaHora = new System.Windows.Forms.DateTimePicker();
+            this.gbSexo = new System.Windows.Forms.GroupBox();
+            this.rbMasculino = new System.Windows.Forms.RadioButton();
+            this.rbFemenino = new System.Windows.Forms.RadioButton();
             this.btnActualizarFecha = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEdad)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.gbSexo.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cmbSexo);
-            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.gbSexo);
             this.groupBox1.Controls.Add(this.nudEdad);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label4);
@@ -75,26 +76,6 @@ namespace ProyectoFinal.Forms
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Ingresante";
-            // 
-            // cmbSexo
-            // 
-            this.cmbSexo.FormattingEnabled = true;
-            this.cmbSexo.Items.AddRange(new object[] {
-            "Hombre",
-            "Mujer"});
-            this.cmbSexo.Location = new System.Drawing.Point(231, 83);
-            this.cmbSexo.Name = "cmbSexo";
-            this.cmbSexo.Size = new System.Drawing.Size(121, 23);
-            this.cmbSexo.TabIndex = 11;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(227, 68);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 15);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Sexo";
             // 
             // nudEdad
             // 
@@ -248,6 +229,7 @@ namespace ProyectoFinal.Forms
             this.btnBuscar.TabIndex = 0;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBusqueda
             // 
@@ -265,6 +247,39 @@ namespace ProyectoFinal.Forms
             this.dtpFechaHora.Name = "dtpFechaHora";
             this.dtpFechaHora.Size = new System.Drawing.Size(200, 21);
             this.dtpFechaHora.TabIndex = 9;
+            // 
+            // gbSexo
+            // 
+            this.gbSexo.Controls.Add(this.rbFemenino);
+            this.gbSexo.Controls.Add(this.rbMasculino);
+            this.gbSexo.Location = new System.Drawing.Point(231, 68);
+            this.gbSexo.Name = "gbSexo";
+            this.gbSexo.Size = new System.Drawing.Size(95, 49);
+            this.gbSexo.TabIndex = 12;
+            this.gbSexo.TabStop = false;
+            this.gbSexo.Text = "Sexo";
+            // 
+            // rbMasculino
+            // 
+            this.rbMasculino.AutoSize = true;
+            this.rbMasculino.Location = new System.Drawing.Point(8, 18);
+            this.rbMasculino.Name = "rbMasculino";
+            this.rbMasculino.Size = new System.Drawing.Size(36, 19);
+            this.rbMasculino.TabIndex = 0;
+            this.rbMasculino.TabStop = true;
+            this.rbMasculino.Text = "M";
+            this.rbMasculino.UseVisualStyleBackColor = true;
+            // 
+            // rbFemenino
+            // 
+            this.rbFemenino.AutoSize = true;
+            this.rbFemenino.Location = new System.Drawing.Point(50, 18);
+            this.rbFemenino.Name = "rbFemenino";
+            this.rbFemenino.Size = new System.Drawing.Size(32, 19);
+            this.rbFemenino.TabIndex = 1;
+            this.rbFemenino.TabStop = true;
+            this.rbFemenino.Text = "F";
+            this.rbFemenino.UseVisualStyleBackColor = true;
             // 
             // btnActualizarFecha
             // 
@@ -294,6 +309,8 @@ namespace ProyectoFinal.Forms
             ((System.ComponentModel.ISupportInitialize)(this.nudEdad)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.gbSexo.ResumeLayout(false);
+            this.gbSexo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,11 +334,12 @@ namespace ProyectoFinal.Forms
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.ComboBox cmbSexo;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.NumericUpDown nudEdad;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpFechaHora;
         private System.Windows.Forms.Button btnActualizarFecha;
+        private System.Windows.Forms.GroupBox gbSexo;
+        private System.Windows.Forms.RadioButton rbFemenino;
+        private System.Windows.Forms.RadioButton rbMasculino;
     }
 }

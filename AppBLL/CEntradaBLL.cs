@@ -21,5 +21,15 @@ namespace AppBLL
             entradaD.crear(nuevaEntrada);
         }
 
+        public List<Entrada> ListarPorFecha(DateTime fecha)
+        {
+            return entradaD.filtrarPorFecha(fecha);
+        }
+
+        public Entrada BuscarPorId(int id)
+        {
+            return entradaD.buscarPorId(id);
+        }
+
     }
 }

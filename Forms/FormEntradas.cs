@@ -17,6 +17,7 @@ namespace ProyectoFinal.Forms
     {
         CEntradaBLL entradaB = new CEntradaBLL();
         CPersonaBLL personaB = new CPersonaBLL();
+        Form alerta;
         public FormEntradas()
         {
             InitializeComponent();
@@ -59,14 +60,27 @@ namespace ProyectoFinal.Forms
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Entrada nuevaEntrada = new Entrada();
-            nuevaEntrada.FechaHora = dtpFechaHora.Value;
-            nuevaEntrada.PersonaId = personaB.BuscarPorDni(txtDni.Text).PersonaId;
-            nuevaEntrada.Destino = txtDestino.Text;
-            nuevaEntrada.Motivo = rtxtMotivo.Text;
+            
+            var personaDni = personaB.BuscarPorDni(txtDni.Text);
+            if(personaDni != null)
+            {
+                Entrada nuevaEntrada = new Entrada();
+                nuevaEntrada.Fecha = dtpFechaHora.Value.Date;
+                nuevaEntrada.Hora = dtpFechaHora.Value.TimeOfDay;
+                nuevaEntrada.PersonaId = personaDni.PersonaId;
+                nuevaEntrada.Destino = txtDestino.Text;
+                nuevaEntrada.Motivo = rtxtMotivo.Text;
+                entradaB.CrearEntrada(nuevaEntrada);
+                Reset();
+                alerta = new Alerts.SuccessGeneric("Se registro la Entrada correctamente!");
+                alerta.Show();
+            }
+            else
+            {
+                alerta = new Alerts.ErrorGeneric("No se encontro registros con dni: "+txtDni.Text);
+                alerta.Show();
+            }
 
-            entradaB.CrearEntrada(nuevaEntrada);
-            Reset();
         }
         private void Reset()
         {
@@ -78,12 +92,20 @@ namespace ProyectoFinal.Forms
             txtDestino.Text = "";
             rtxtMotivo.Text = "";
             nudEdad.Value = 0;
+            rbMasculino.Checked = false;
+            rbFemenino.Checked = false;
         }
 
         private void btnActualizarFecha_Click(object sender, EventArgs e)
         {
             DateTime localDate = DateTime.Now;
             dtpFechaHora.Value = localDate;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            alerta = new Alerts.ErrorGeneric("No esta implementado.");
+            alerta.Show();
         }
     }
 }

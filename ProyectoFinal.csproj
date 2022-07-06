@@ -53,6 +53,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alerts\ErrorGeneric.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alerts\ErrorGeneric.Designer.cs">
+      <DependentUpon>ErrorGeneric.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alerts\SuccessGeneric.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alerts\SuccessGeneric.Designer.cs">
+      <DependentUpon>SuccessGeneric.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormDetalles.Designer.cs">
+      <DependentUpon>FormDetalles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormEntradas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +92,15 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThemeColor.cs" />
+    <EmbeddedResource Include="Alerts\ErrorGeneric.resx">
+      <DependentUpon>ErrorGeneric.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alerts\SuccessGeneric.resx">
+      <DependentUpon>SuccessGeneric.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormDetalles.resx">
+      <DependentUpon>FormDetalles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormEntradas.resx">
       <DependentUpon>FormEntradas.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +160,9 @@
     <None Include="Resources\cancelar.png" />
     <None Include="Resources\circulo.png" />
     <None Include="Resources\circle-outline-16.png" />
+    <None Include="Resources\error-64.png" />
+    <None Include="Resources\error-48.png" />
+    <None Include="Resources\check-mark-7-48.png" />
     <Content Include="Resources\reloj.png" />
     <None Include="Resources\reloj1.png" />
   </ItemGroup>

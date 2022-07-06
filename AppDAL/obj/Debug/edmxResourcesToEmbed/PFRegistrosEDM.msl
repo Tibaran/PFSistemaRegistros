@@ -5,7 +5,8 @@
       <EntityTypeMapping TypeName="PFRegistrosModel.entrada">
         <MappingFragment StoreEntitySet="entrada">
           <ScalarProperty Name="EntradaId" ColumnName="EntradaId" />
-          <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
           <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
           <ScalarProperty Name="Destino" ColumnName="Destino" />
           <ScalarProperty Name="Motivo" ColumnName="Motivo" />

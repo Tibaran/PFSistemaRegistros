@@ -22,3 +22,6 @@ F:\proyectosNET\ProyectoFinal\bin\Debug\EntityFramework.xml
 F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CopyComplete
 F:\proyectosNET\ProyectoFinal\bin\Debug\EntityFramework.SqlServer.dll
 F:\proyectosNET\ProyectoFinal\bin\Debug\EntityFramework.SqlServer.xml
+F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.Alerts.ErrorGeneric.resources
+F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.Alerts.SuccessGeneric.resources
+F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FormDetalles.resources

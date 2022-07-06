@@ -41,5 +41,25 @@ namespace ProyectoFinal.Forms
                 }
             }
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            gvEntradasListado.DataSource = entradaB.ListarPorFecha(dtpFechaBusqueda.Value.Date);
+            gvEntradasListado.Refresh();
+        }
+
+        private void gvEntradasListado_SelectionChanged(object sender, EventArgs e)
+        {
+            if(gvEntradasListado.SelectedRows.Count > 0)
+            {
+                txtIdEntrada.Text = gvEntradasListado.SelectedRows[0].Cells[0].Value.ToString();
+            }
+        }
+
+        private void btnDetalles_Click(object sender, EventArgs e)
+        {
+            Form detalle = new Forms.FormDetalles(Int32.Parse(txtIdEntrada.Text));
+            detalle.Show();
+        }
     }
 }

@@ -15,7 +15,8 @@ namespace AppDAL
     public partial class entrada
     {
         public int EntradaId { get; set; }
-        public System.DateTime FechaHora { get; set; }
+        public System.DateTime Fecha { get; set; }
+        public Nullable<System.TimeSpan> Hora { get; set; }
         public int PersonaId { get; set; }
         public string Destino { get; set; }
         public string Motivo { get; set; }

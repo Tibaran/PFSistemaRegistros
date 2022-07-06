@@ -66,13 +66,47 @@ namespace AppDAL
                                     Edad = (int)p.Edad,
                                     Sexo = p.Sexo
                                 };
+                    if(result.First() == null)
+                    {
+                        return null;
+                    }
                     return result.First();
                 }
             }
             catch
             {
                 Console.WriteLine("Error en BuscarPorDni personaDAL");
-                return new CPersona();
+                return null;
+            }
+        }
+        public CPersona buscarPorId(int id)
+        {
+            try
+            {
+                using (PFRegistrosEntities contexto = new PFRegistrosEntities())
+                {
+                    var personas = contexto.personas;
+                    var result = from p in personas
+                                 where p.PersonaId == id
+                                 select new CPersona {
+                                     PersonaId = p.PersonaId,
+                                     Nombre = p.Nombre,
+                                     Apellido = p.Apellido,
+                                     DNI = p.Dni,
+                                     Edad = (int)p.Edad,
+                                     Sexo = p.Sexo
+                                 };
+                    if (result.First() == null)
+                    {
+                        return null;
+                    }
+                    return result.First();
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Error en BuscarPorId personaDAL");
+                return null;
             }
         }
     }

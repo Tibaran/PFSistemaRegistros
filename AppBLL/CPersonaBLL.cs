@@ -20,5 +20,9 @@ namespace AppBLL
         {
             return personaDAL.buscarPorDni(dni);
         }
+        public CPersona BuscarPorId(int id)
+        {
+            return personaDAL.buscarPorId(id);
+        }
     }
 }
