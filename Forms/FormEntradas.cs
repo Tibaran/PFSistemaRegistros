@@ -64,16 +64,7 @@ namespace ProyectoFinal.Forms
             var personaDni = personaB.BuscarPorDni(txtDni.Text);
             if(personaDni != null)
             {
-                Entrada nuevaEntrada = new Entrada();
-                nuevaEntrada.Fecha = dtpFechaHora.Value.Date;
-                nuevaEntrada.Hora = dtpFechaHora.Value.TimeOfDay;
-                nuevaEntrada.PersonaId = personaDni.PersonaId;
-                nuevaEntrada.Destino = txtDestino.Text;
-                nuevaEntrada.Motivo = rtxtMotivo.Text;
-                entradaB.CrearEntrada(nuevaEntrada);
-                Reset();
-                alerta = new Alerts.SuccessGeneric("Se registro la Entrada correctamente!");
-                alerta.Show();
+                registrar(personaDni);
             }
             else
             {
@@ -81,6 +72,19 @@ namespace ProyectoFinal.Forms
                 alerta.Show();
             }
 
+        }
+        private void registrar(CPersona persona)
+        {
+            Entrada nuevaEntrada = new Entrada();
+            nuevaEntrada.Fecha = dtpFechaHora.Value.Date;
+            nuevaEntrada.Hora = dtpFechaHora.Value.TimeOfDay;
+            nuevaEntrada.PersonaId = persona.PersonaId;
+            nuevaEntrada.Destino = txtDestino.Text;
+            nuevaEntrada.Motivo = rtxtMotivo.Text;
+            entradaB.CrearEntrada(nuevaEntrada);
+            Reset();
+            alerta = new Alerts.SuccessGeneric("Se registro la Entrada correctamente!");
+            alerta.Show();
         }
         private void Reset()
         {
@@ -104,8 +108,63 @@ namespace ProyectoFinal.Forms
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            alerta = new Alerts.ErrorGeneric("No esta implementado.");
-            alerta.Show();
+            var resultado = personaB.BuscarPorDni(txtBusqueda.Text);
+            if(resultado != null)
+            {
+                txtNombre.Text = resultado.Nombre;
+                txtApellido.Text = resultado.Apellido;
+                txtDni.Text = resultado.DNI;
+                nudEdad.Value = resultado.Edad;
+                if(resultado.Sexo == "M")
+                {
+                    rbMasculino.Checked = true;
+                }
+                if (resultado.Sexo == "F")
+                {
+                    rbFemenino.Checked = true;
+                }
+            }
+            else
+            {
+                alerta = new Alerts.ErrorGeneric("El DNI es incorrecto o no existe.");
+                alerta.Show();
+            }
+            
+        }
+
+        private void btnRegistrarPersona_Click(object sender, EventArgs e)
+        {
+            CPersona nuevaPersona = new CPersona();
+            nuevaPersona.Nombre = txtNombre.Text;
+            nuevaPersona.Apellido = txtApellido.Text;
+            nuevaPersona.DNI = txtDni.Text;
+            nuevaPersona.Edad = (int)nudEdad.Value;
+            if (rbMasculino.Checked)
+            {
+                nuevaPersona.Sexo = "M";
+            }
+            else
+            if (rbFemenino.Checked)
+            {
+                nuevaPersona.Sexo = "F";
+            }
+            try
+            {
+                personaB.Crear(nuevaPersona);
+                alerta = new Alerts.SuccessGeneric("Se registro a la persona correctamente!");
+                alerta.Show();
+            }
+            catch
+            {
+                alerta = new Alerts.ErrorGeneric("Error al registrar a: "+txtDni.Text);
+                alerta.Show();
+            }
+
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Reset();
         }
     }
 }

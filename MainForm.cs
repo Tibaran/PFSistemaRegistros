@@ -17,8 +17,9 @@ namespace ProyectoFinal
         private Random random;
         private int tempIndex;
         private Form activeForm;
+        private Form loginForm;
 
-        public MainForm()
+        public MainForm(Form login)
         {
             InitializeComponent();
             random = new Random();
@@ -26,6 +27,12 @@ namespace ProyectoFinal
             this.Text = string.Empty;
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            ThemeColor.PrimaryColor = Color.FromArgb(109, 129, 24);
+            ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(Color.FromArgb(109, 129, 24), -0.3);
+            panelTitleBar.BackColor = ThemeColor.PrimaryColor;
+            panelLogo.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.3);
+            loginForm = login;
+
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -41,7 +48,8 @@ namespace ProyectoFinal
             }
             tempIndex = index;
             string color = ThemeColor.ColorList[index];
-            return ColorTranslator.FromHtml(color);
+            //return ColorTranslator.FromHtml(color);
+            return Color.FromArgb(109,129,24);
         }
 
         private void ActiveButton(object btnSender)
@@ -56,10 +64,10 @@ namespace ProyectoFinal
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                    panelTitleBar.BackColor = color;
-                    panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
-                    ThemeColor.PrimaryColor = color;
-                    ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                    //panelTitleBar.BackColor = color;
+                    //panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                    //ThemeColor.PrimaryColor = color;
+                    //ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     btnCloseChildForm.Visible = true;
                 }
             }
@@ -70,7 +78,8 @@ namespace ProyectoFinal
             {
                 if(previousBtn.GetType() == typeof(Button))
                 {
-                    previousBtn.BackColor = Color.FromArgb(51, 51, 76);
+                    //previousBtn.BackColor = Color.FromArgb(51, 51, 76);
+                    previousBtn.BackColor = Color.FromArgb(30,30,30);
                     previousBtn.ForeColor = Color.Gainsboro;
                     previousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
@@ -111,8 +120,8 @@ namespace ProyectoFinal
         {
             DisableButton();
             lblTitle.Text = "HOME";
-            panelTitleBar.BackColor = Color.FromArgb(51, 51, 76);
-            panelLogo.BackColor = Color.FromArgb(39, 39, 58);
+            //panelTitleBar.BackColor = ThemeColor.PrimaryColor;
+            //panelLogo.BackColor = Color.FromArgb(39, 39, 58);
             currentButton = null;
             btnCloseChildForm.Visible = false;
         }
@@ -148,12 +157,18 @@ namespace ProyectoFinal
 
         private void btnPersona_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new Forms.FormPersona(), sender);
         }
 
         private void btnListarPersonas_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new Forms.FormUsuarios(), sender);
+        }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            loginForm.Show();
+            this.Close();
         }
     }
 }

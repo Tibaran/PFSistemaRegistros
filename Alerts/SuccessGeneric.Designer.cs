@@ -102,7 +102,7 @@ namespace ProyectoFinal.Alerts
             this.Controls.Add(this.panel1);
             this.MaximumSize = new System.Drawing.Size(359, 224);
             this.Name = "SuccessGeneric";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SuccessGeneric";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

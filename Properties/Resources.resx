@@ -127,29 +127,41 @@
   <data name="error-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\error-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="user-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="circle-outline-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\circle-outline-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sinchronize-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sinchronize-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="error-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\error-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="time-8-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\time-8-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="info-2-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\info-2-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="reloj" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reloj.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="info-2-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\info-2-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sinchronize-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sinchronize-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="reloj" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reloj.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="info-2-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\info-2-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="view-details-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\view-details-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sinchronize-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sinchronize-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="check-mark-7-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check-mark-7-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="circulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\circulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,13 +169,19 @@
   <data name="reloj1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reloj1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="exit-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exit-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="x-mark-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\x-mark-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="time-8-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\time-8-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="reloj2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reloj1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="check-mark-7-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\check-mark-7-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="police-2-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\police-2-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

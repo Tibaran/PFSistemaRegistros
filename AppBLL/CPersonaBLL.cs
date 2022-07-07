@@ -24,5 +24,20 @@ namespace AppBLL
         {
             return personaDAL.buscarPorId(id);
         }
+
+        public void Crear(CPersona persona)
+        {
+            personaDAL.crear(persona);
+        }
+
+        public string Editar(CPersona editar)
+        {
+            return personaDAL.editar(editar);
+        }
+
+        public string Eliminar(int id)
+        {
+            return personaDAL.eliminar(id);
+        }
     }
 }

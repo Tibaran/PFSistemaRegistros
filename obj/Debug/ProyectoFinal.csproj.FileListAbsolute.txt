@@ -25,3 +25,8 @@ F:\proyectosNET\ProyectoFinal\bin\Debug\EntityFramework.SqlServer.xml
 F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.Alerts.ErrorGeneric.resources
 F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.Alerts.SuccessGeneric.resources
 F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FormDetalles.resources
+F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FormPersona.resources
+F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.Alerts.ChoiceGeneric.resources
+F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FormLogin.resources
+F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FormUsuarios.resources
+F:\proyectosNET\ProyectoFinal\obj\Debug\ProyectoFinal.Alerts.InfoGeneric.resources

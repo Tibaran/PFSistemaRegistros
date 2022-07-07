@@ -78,6 +78,7 @@
     <Compile Include="usuario.cs">
       <DependentUpon>PFRegistrosEDM.tt</DependentUpon>
     </Compile>
+    <Compile Include="UsuarioDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />

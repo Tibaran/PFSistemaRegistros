@@ -123,6 +123,56 @@ namespace ProyectoFinal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exit_24 {
+            get {
+                object obj = ResourceManager.GetObject("exit-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap info_2_24 {
+            get {
+                object obj = ResourceManager.GetObject("info-2-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap info_2_32 {
+            get {
+                object obj = ResourceManager.GetObject("info-2-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap info_2_48 {
+            get {
+                object obj = ResourceManager.GetObject("info-2-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap police_2_24 {
+            get {
+                object obj = ResourceManager.GetObject("police-2-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap reloj {
             get {
                 object obj = ResourceManager.GetObject("reloj", resourceCulture);
@@ -186,6 +236,16 @@ namespace ProyectoFinal.Properties {
         internal static System.Drawing.Bitmap user_24 {
             get {
                 object obj = ResourceManager.GetObject("user-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_64 {
+            get {
+                object obj = ResourceManager.GetObject("user-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

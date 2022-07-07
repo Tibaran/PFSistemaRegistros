@@ -31,5 +31,10 @@ namespace AppBLL
             return entradaD.buscarPorId(id);
         }
 
+        public Entrada BuscarPorIdPersona(int id)
+        {
+            return entradaD.buscarPorIdPersona(id);
+        }
+
     }
 }

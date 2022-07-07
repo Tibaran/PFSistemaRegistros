@@ -76,6 +76,36 @@ namespace AppDAL
                 return null;
             }
         }
+        public Entrada buscarPorIdPersona(int id)
+        {
+            try
+            {
+                using (PFRegistrosEntities contexto = new PFRegistrosEntities())
+                {
+                    var entradas = contexto.entradas;
+                    var result = from p in entradas
+                                 where p.PersonaId == id
+                                 select new Entrada {
+                                     EntradaId = p.EntradaId,
+                                     Fecha = p.Fecha,
+                                     Hora = (TimeSpan)p.Hora,
+                                     PersonaId = p.PersonaId,
+                                     Destino = p.Destino,
+                                     Motivo = p.Motivo
+                                 };
+                    if (result.First() == null)
+                    {
+                        return null;
+                    }
+                    return result.First();
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Error en BuscarPorIdPersona entradaDAL");
+                return null;
+            }
+        }
 
         public List<Entrada> filtrarPorFecha(DateTime fecha)
         {

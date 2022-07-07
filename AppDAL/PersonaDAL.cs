@@ -109,5 +109,65 @@ namespace AppDAL
                 return null;
             }
         }
+        public string editar(CPersona editarPersona)
+        {
+            
+            try
+            {
+                using (PFRegistrosEntities contexto = new PFRegistrosEntities())
+                {
+                    
+                    var resultado = contexto.personas.Find(editarPersona.PersonaId);
+                    if (resultado != null)
+                    {
+                        resultado.Nombre = editarPersona.Nombre;
+                        resultado.Apellido = editarPersona.Apellido;
+                        resultado.Dni = editarPersona.DNI;
+                        resultado.Edad = editarPersona.Edad;
+                        resultado.Sexo = editarPersona.Sexo;
+
+                        contexto.SaveChanges();
+                        return "Se edito con exito!";
+                    }
+                    else
+                    {
+                        return "La persona no existe!";
+                    }
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Error en BuscarPorId personaDAL");
+                return "Error al intentar eliminar persona!";
+            }
+        }
+
+        public string eliminar(int id)
+        {
+            try
+            {
+                using (PFRegistrosEntities contexto = new PFRegistrosEntities())
+                {
+                    var resultado = (from p in contexto.personas
+                                     where p.PersonaId == id
+                                     select p).FirstOrDefault();
+                    if(resultado != null)
+                    {
+                        contexto.personas.Remove(resultado);
+                        contexto.SaveChanges();
+                        return "Se elimino con exito!";
+                    }
+                    else
+                    {
+                        return "La persona no existe!";
+                    }
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Error en Eliminar personaDAL");
+                return "Error al intentar eliminar persona!";
+            }
+        }
     }
 }

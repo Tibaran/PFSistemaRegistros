@@ -30,6 +30,10 @@ namespace ProyectoFinal.Forms
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnRegistrarPersona = new System.Windows.Forms.Button();
+            this.gbSexo = new System.Windows.Forms.GroupBox();
+            this.rbFemenino = new System.Windows.Forms.RadioButton();
+            this.rbMasculino = new System.Windows.Forms.RadioButton();
             this.nudEdad = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,6 +43,8 @@ namespace ProyectoFinal.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnActualizarFecha = new System.Windows.Forms.Button();
+            this.dtpFechaHora = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDestino = new System.Windows.Forms.TextBox();
             this.rtxtMotivo = new System.Windows.Forms.RichTextBox();
@@ -47,19 +53,19 @@ namespace ProyectoFinal.Forms
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
-            this.dtpFechaHora = new System.Windows.Forms.DateTimePicker();
-            this.gbSexo = new System.Windows.Forms.GroupBox();
-            this.rbMasculino = new System.Windows.Forms.RadioButton();
-            this.rbFemenino = new System.Windows.Forms.RadioButton();
-            this.btnActualizarFecha = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.gbSexo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEdad)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.gbSexo.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.btnRegistrarPersona);
             this.groupBox1.Controls.Add(this.gbSexo);
             this.groupBox1.Controls.Add(this.nudEdad);
             this.groupBox1.Controls.Add(this.label1);
@@ -76,6 +82,51 @@ namespace ProyectoFinal.Forms
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Ingresante";
+            // 
+            // btnRegistrarPersona
+            // 
+            this.btnRegistrarPersona.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegistrarPersona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarPersona.Location = new System.Drawing.Point(465, 96);
+            this.btnRegistrarPersona.Name = "btnRegistrarPersona";
+            this.btnRegistrarPersona.Size = new System.Drawing.Size(188, 31);
+            this.btnRegistrarPersona.TabIndex = 13;
+            this.btnRegistrarPersona.Text = "Registrar Persona";
+            this.btnRegistrarPersona.UseVisualStyleBackColor = true;
+            this.btnRegistrarPersona.Click += new System.EventHandler(this.btnRegistrarPersona_Click);
+            // 
+            // gbSexo
+            // 
+            this.gbSexo.Controls.Add(this.rbFemenino);
+            this.gbSexo.Controls.Add(this.rbMasculino);
+            this.gbSexo.Location = new System.Drawing.Point(231, 68);
+            this.gbSexo.Name = "gbSexo";
+            this.gbSexo.Size = new System.Drawing.Size(95, 49);
+            this.gbSexo.TabIndex = 12;
+            this.gbSexo.TabStop = false;
+            this.gbSexo.Text = "Sexo";
+            // 
+            // rbFemenino
+            // 
+            this.rbFemenino.AutoSize = true;
+            this.rbFemenino.Location = new System.Drawing.Point(50, 18);
+            this.rbFemenino.Name = "rbFemenino";
+            this.rbFemenino.Size = new System.Drawing.Size(32, 19);
+            this.rbFemenino.TabIndex = 1;
+            this.rbFemenino.TabStop = true;
+            this.rbFemenino.Text = "F";
+            this.rbFemenino.UseVisualStyleBackColor = true;
+            // 
+            // rbMasculino
+            // 
+            this.rbMasculino.AutoSize = true;
+            this.rbMasculino.Location = new System.Drawing.Point(8, 18);
+            this.rbMasculino.Name = "rbMasculino";
+            this.rbMasculino.Size = new System.Drawing.Size(36, 19);
+            this.rbMasculino.TabIndex = 0;
+            this.rbMasculino.TabStop = true;
+            this.rbMasculino.Text = "M";
+            this.rbMasculino.UseVisualStyleBackColor = true;
             // 
             // nudEdad
             // 
@@ -146,6 +197,9 @@ namespace ProyectoFinal.Forms
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.btnActualizarFecha);
             this.groupBox2.Controls.Add(this.dtpFechaHora);
             this.groupBox2.Controls.Add(this.label7);
@@ -161,6 +215,27 @@ namespace ProyectoFinal.Forms
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detalles de Entrada";
+            // 
+            // btnActualizarFecha
+            // 
+            this.btnActualizarFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarFecha.Image = global::ProyectoFinal.Properties.Resources.sinchronize_16;
+            this.btnActualizarFecha.Location = new System.Drawing.Point(659, 43);
+            this.btnActualizarFecha.Name = "btnActualizarFecha";
+            this.btnActualizarFecha.Size = new System.Drawing.Size(19, 19);
+            this.btnActualizarFecha.TabIndex = 10;
+            this.btnActualizarFecha.UseVisualStyleBackColor = true;
+            this.btnActualizarFecha.Click += new System.EventHandler(this.btnActualizarFecha_Click);
+            // 
+            // dtpFechaHora
+            // 
+            this.dtpFechaHora.CustomFormat = "dd/MM/yyyy hh:mm:ss";
+            this.dtpFechaHora.Enabled = false;
+            this.dtpFechaHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaHora.Location = new System.Drawing.Point(453, 43);
+            this.dtpFechaHora.Name = "dtpFechaHora";
+            this.dtpFechaHora.Size = new System.Drawing.Size(200, 21);
+            this.dtpFechaHora.TabIndex = 9;
             // 
             // label7
             // 
@@ -209,21 +284,23 @@ namespace ProyectoFinal.Forms
             // 
             // btnRegistrar
             // 
+            this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(453, 100);
+            this.btnRegistrar.Location = new System.Drawing.Point(465, 100);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(200, 45);
+            this.btnRegistrar.Size = new System.Drawing.Size(188, 45);
             this.btnRegistrar.TabIndex = 6;
-            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.Text = "Registrar Entrada";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(448, 13);
+            this.btnBuscar.Location = new System.Drawing.Point(622, 13);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 0;
@@ -233,70 +310,41 @@ namespace ProyectoFinal.Forms
             // 
             // txtBusqueda
             // 
-            this.txtBusqueda.Location = new System.Drawing.Point(529, 15);
+            this.txtBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBusqueda.Location = new System.Drawing.Point(440, 16);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(176, 20);
             this.txtBusqueda.TabIndex = 1;
             // 
-            // dtpFechaHora
+            // label8
             // 
-            this.dtpFechaHora.CustomFormat = "dd/MM/yyyy hh:mm:ss";
-            this.dtpFechaHora.Enabled = false;
-            this.dtpFechaHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaHora.Location = new System.Drawing.Point(453, 43);
-            this.dtpFechaHora.Name = "dtpFechaHora";
-            this.dtpFechaHora.Size = new System.Drawing.Size(200, 21);
-            this.dtpFechaHora.TabIndex = 9;
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(358, 17);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 15);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Ingresar DNI";
             // 
-            // gbSexo
+            // btnLimpiar
             // 
-            this.gbSexo.Controls.Add(this.rbFemenino);
-            this.gbSexo.Controls.Add(this.rbMasculino);
-            this.gbSexo.Location = new System.Drawing.Point(231, 68);
-            this.gbSexo.Name = "gbSexo";
-            this.gbSexo.Size = new System.Drawing.Size(95, 49);
-            this.gbSexo.TabIndex = 12;
-            this.gbSexo.TabStop = false;
-            this.gbSexo.Text = "Sexo";
-            // 
-            // rbMasculino
-            // 
-            this.rbMasculino.AutoSize = true;
-            this.rbMasculino.Location = new System.Drawing.Point(8, 18);
-            this.rbMasculino.Name = "rbMasculino";
-            this.rbMasculino.Size = new System.Drawing.Size(36, 19);
-            this.rbMasculino.TabIndex = 0;
-            this.rbMasculino.TabStop = true;
-            this.rbMasculino.Text = "M";
-            this.rbMasculino.UseVisualStyleBackColor = true;
-            // 
-            // rbFemenino
-            // 
-            this.rbFemenino.AutoSize = true;
-            this.rbFemenino.Location = new System.Drawing.Point(50, 18);
-            this.rbFemenino.Name = "rbFemenino";
-            this.rbFemenino.Size = new System.Drawing.Size(32, 19);
-            this.rbFemenino.TabIndex = 1;
-            this.rbFemenino.TabStop = true;
-            this.rbFemenino.Text = "F";
-            this.rbFemenino.UseVisualStyleBackColor = true;
-            // 
-            // btnActualizarFecha
-            // 
-            this.btnActualizarFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizarFecha.Image = global::ProyectoFinal.Properties.Resources.sinchronize_16;
-            this.btnActualizarFecha.Location = new System.Drawing.Point(659, 43);
-            this.btnActualizarFecha.Name = "btnActualizarFecha";
-            this.btnActualizarFecha.Size = new System.Drawing.Size(19, 19);
-            this.btnActualizarFecha.TabIndex = 10;
-            this.btnActualizarFecha.UseVisualStyleBackColor = true;
-            this.btnActualizarFecha.Click += new System.EventHandler(this.btnActualizarFecha_Click);
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Location = new System.Drawing.Point(18, 13);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.TabIndex = 3;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // FormEntradas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 450);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnBuscar);
@@ -306,11 +354,11 @@ namespace ProyectoFinal.Forms
             this.Load += new System.EventHandler(this.FormEntradas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.gbSexo.ResumeLayout(false);
+            this.gbSexo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEdad)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.gbSexo.ResumeLayout(false);
-            this.gbSexo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,5 +389,8 @@ namespace ProyectoFinal.Forms
         private System.Windows.Forms.GroupBox gbSexo;
         private System.Windows.Forms.RadioButton rbFemenino;
         private System.Windows.Forms.RadioButton rbMasculino;
+        private System.Windows.Forms.Button btnRegistrarPersona;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

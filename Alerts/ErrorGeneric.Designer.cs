@@ -30,10 +30,10 @@ namespace ProyectoFinal.Alerts
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,15 +48,6 @@ namespace ProyectoFinal.Alerts
             this.panel1.Size = new System.Drawing.Size(343, 60);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.error_48;
-            this.pictureBox1.Location = new System.Drawing.Point(142, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 48);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -95,6 +86,15 @@ namespace ProyectoFinal.Alerts
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.error_48;
+            this.pictureBox1.Location = new System.Drawing.Point(142, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 48);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // ErrorGeneric
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -106,7 +106,7 @@ namespace ProyectoFinal.Alerts
             this.Controls.Add(this.panel1);
             this.MaximumSize = new System.Drawing.Size(359, 224);
             this.Name = "ErrorGeneric";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ErrorGeneric";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

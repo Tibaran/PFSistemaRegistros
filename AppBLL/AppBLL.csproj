@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="CEntradaBLL.cs" />
     <Compile Include="CPersonaBLL.cs" />
+    <Compile Include="CUsuarioBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
